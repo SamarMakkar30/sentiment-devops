@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+model/model.pkl
+.git/
+.gitignore
