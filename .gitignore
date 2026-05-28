@@ -1,8 +1,7 @@
-venv/
-.venv/
+model/model.pkl
 __pycache__/
 *.pyc
-.pytest_cache/
-.vscode/
 .env
-model/model.pkl
+.venv/
+frontend/node_modules/
+frontend/dist/
