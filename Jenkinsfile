@@ -2,9 +2,9 @@ pipeline {
   agent any
 
   environment {
-    AWS_REGION = 'us-east-1'
-    ECR_REPOSITORY = 'sentiment-app'
-    AWS_ACCOUNT_ID = 'YOUR_ACCOUNT_ID'
+    AWS_REGION = 'ap-south-1'
+    ECR_REPOSITORY = 'sentiment-analyzer'
+    AWS_ACCOUNT_ID = '874373491343'
     ECR_REGISTRY = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
   }
 

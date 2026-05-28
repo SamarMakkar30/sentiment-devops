@@ -122,10 +122,10 @@ If you use Jenkins instead of GitHub Actions:
 
 ## Update Running EC2 Container
 ```bash
-docker pull YOUR_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/sentiment-app:latest
+docker pull YOUR_ACCOUNT_ID.dkr.ecr.ap-south-1.amazonaws.com/sentiment-analyzer:latest
 docker stop sentiment-app
 docker rm sentiment-app
-docker run -d -p 5000:5000 --name sentiment-app --restart always YOUR_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/sentiment-app:latest
+docker run -d -p 5000:5000 --name sentiment-app --restart always YOUR_ACCOUNT_ID.dkr.ecr.ap-south-1.amazonaws.com/sentiment-analyzer:latest
 ```
 
 ## Troubleshooting
