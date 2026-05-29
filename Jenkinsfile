@@ -24,7 +24,7 @@ pipeline {
 
   post {
     success {
-      echo 'Jenkins build completed and image pushed to ECR.'
+      echo 'Jenkins build completed successfully.'
     }
   }
 }
