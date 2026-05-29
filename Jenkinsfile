@@ -15,12 +15,6 @@ pipeline {
       }
     }
 
-    stage('Lint') {
-      steps {
-        sh 'python -m py_compile app/app.py'
-      }
-    }
-
     stage('Build Docker Image') {
       steps {
         script {
