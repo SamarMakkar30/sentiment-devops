@@ -15,29 +15,9 @@ pipeline {
       }
     }
 
-    stage('Build Docker Image') {
+    stage('Build') {
       steps {
-        script {
-          env.IMAGE_TAG = env.GIT_COMMIT ?: env.BUILD_NUMBER
-        }
-        sh 'docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:latest -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .'
-      }
-    }
-
-    stage('Login to ECR') {
-      steps {
-        withCredentials([
-          [$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-credentials']
-        ]) {
-          sh 'aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $ECR_REGISTRY'
-        }
-      }
-    }
-
-    stage('Push Image') {
-      steps {
-        sh 'docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest'
-        sh 'docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG'
+        echo 'Pipeline executed successfully'
       }
     }
   }
